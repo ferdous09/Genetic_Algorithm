@@ -1,10 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Created on Sun Dec  1 18:56:23 2019
 @author: mpervej
-
-This Code does: 
-    Minimize: f(x1,x2) = (x2-x1)**4 + 12*x1*x2 - x1 + x2 - 3 using - 
-                (a) GA 
+This Code does: Maximize Peak Function using Cannonical GA
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 import numpy as np
@@ -20,9 +17,7 @@ axis_font = {'fontname':'Times New Roman', 'size':'14'}
 plt.rcParams["font.family"] = "Times New Roman"
 
 #========================================= Problem 2 #=========================================
-def objfunc(x1,x2):
-    # f1 = (x2-x1)**4 + 12*x1*x2 - x1 + x2 - 3
-    # f = 1/(f1 + 100)                                                                                                                 # Fitness Function for given problem
+def objfunc(x1,x2):                                                                                                                # Fitness Function for given problem
     f = 3*(1-x1)**2*np.exp(-x1**2 - (x2+1)**2) - 10*(x1/5 - x1**3 - x2**5)*np.exp(-x1**2-x2**2) - np.exp(-(x1+1)**2 - x2**2)/3      # Peak Function
     return f
 #======================= Surface Plot ==========================
