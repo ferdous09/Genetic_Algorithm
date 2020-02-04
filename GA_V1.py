@@ -22,30 +22,30 @@ def objfunc(x1,x2):                                                             
     return f
 #======================= Surface Plot ==========================
 a0, b0 = -3, 3
-#xlist = np.linspace(a0, b0, 50)
-#xx, yy = np.meshgrid(xlist, xlist)
-#fa = objfunc(xx, yy)
-#no_of_contours = 20
-#
-#fig = plt.figure()
-#ax = fig.gca(projection = '3d')
-#surf = ax.plot_surface(xx, yy, objfunc(xx,yy),linewidth = 1, color = 'g', antialiased = True)
-#ax.set_title('Surface of the $Peak$ function', **title_font)
-#ax.set_xlabel('$x_1$', **axis_font)
-#ax.set_ylabel('$x_2$', **axis_font)
-#ax.set_zlabel('$f(x_1,x_2)$', **axis_font)
-#plt.autoscale(enable = True, axis = 'all', tight = True)
-#plt.show()
+xlist = np.linspace(a0, b0, 50)
+xx, yy = np.meshgrid(xlist, xlist)
+fa = objfunc(xx, yy)
+no_of_contours = 20
+
+fig = plt.figure()
+ax = fig.gca(projection = '3d')
+surf = ax.plot_surface(xx, yy, objfunc(xx,yy),linewidth = 1, color = 'g', antialiased = True)
+ax.set_title('Surface of the $Peak$ function', **title_font)
+ax.set_xlabel('$x_1$', **axis_font)
+ax.set_ylabel('$x_2$', **axis_font)
+ax.set_zlabel('$f(x_1,x_2)$', **axis_font)
+plt.autoscale(enable = True, axis = 'all', tight = True)
+plt.show()
 ##plt.savefig("Results/surf_peak.eps", dpi=1200, format='eps', orientation='portrait')
-#
+
 ##======================== Part (b) ===========================
-#fig, ax = plt.subplots()
-#ax.scatter(xx, yy, marker = '.', Linewidth = '0.1', color = 'y')
-#da = ax.contour(xlist, xlist, fa, no_of_contours, extend3d = True)
-#ax.clabel(da, fontsize = 10, inline = 1)
-#ax.set_xlabel('$x_1$')
-#ax.set_ylabel('$x_2$')
-#ax.set_title(r'Contours of the $Peak$ function', **title_font)
+fig, ax = plt.subplots()
+ax.scatter(xx, yy, marker = '.', Linewidth = '0.1', color = 'y')
+da = ax.contour(xlist, xlist, fa, no_of_contours, extend3d = True)
+ax.clabel(da, fontsize = 10, inline = 1)
+ax.set_xlabel('$x_1$')
+ax.set_ylabel('$x_2$')
+ax.set_title(r'Contours of the $Peak$ function', **title_font)
 ##plt.savefig("Results/cntr_peak.eps", dpi=1200, format='eps', orientation='portrait')
 
 
